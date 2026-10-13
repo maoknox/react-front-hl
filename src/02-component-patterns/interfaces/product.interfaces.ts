@@ -10,12 +10,14 @@ export interface ButtonPlusMinusProps {
   incdecValue: number;
   sign: string;
   classname?:string
+  styles?:React.CSSProperties
 }
 
 export interface ProductContextProps {
   counter: number;
   increment: (value: number) => void;
   product: Product;
+  maxCount?: number;
 }
 
 
@@ -43,4 +45,19 @@ export interface OnChangeArgs {
 
 export interface ProductInCart extends Product {
   count: number;
+}
+
+export interface InitialValues {
+  count?: number;
+  maxCount?:number;
+}
+
+export interface ProductCardHandlers {
+    count: number;
+    isMaxCountReached: boolean;
+    maxCount?: number;
+    product: Product;
+
+    increment: ( value: number ) => void;
+    reset: () => void;
 }
