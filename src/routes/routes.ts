@@ -19,10 +19,44 @@ interface Route {
 //const Lazy3 = lazy(() => import(/* webpackChunkName: "LazyLayout" */ '../01-lazyload/pages/LazyPage3'));
 
 const LazyLayout = lazy(() => import(/* webpackChunkName: "LazyLayout" */ '../01-lazyload/layout/LazyLayout'));
-
+const LazyRegisterPage = lazy(() => import(/* webpackChunkName: "LazyRegisterPage" */ '../03-forms/pages/registerPage'));
+const LazyFormikPage = lazy(() => import(/* webpackChunkName: "LazyRegisterPage" */ '../03-forms/pages/FormikBasicPage'));
+const LazyFormikYupPage = lazy(() => import(/* webpackChunkName: "LazyRegisterPage" */ '../03-forms/pages/FormikYupPage'));
+const LazyFormikComponents = lazy(() => import(/* webpackChunkName: "LazyRegisterPage" */ '../03-forms/pages/FormikComponents'));
+const LazyFormikAbstraction = lazy(() => import(/* webpackChunkName: "LazyRegisterPage" */ '../03-forms/pages/FormikAbstraction'));
 
 
 export const routes: Route[] = [
+    {
+        to: '/formik-abstraction',
+        path: 'formik-abstraction',
+        Component: LazyFormikAbstraction,
+        name: 'Formik absraction'
+    },
+    {
+        to: '/formik-components',
+        path: 'formik-components',
+        Component: LazyFormikComponents,
+        name: 'Formik components'
+    },
+    {
+        to: '/page-formik',
+        path: 'page-formik',
+        Component: LazyFormikPage,
+        name: 'Register Formik'
+    },
+    {
+        to: '/formikyup-page',
+        path: 'formikyup-page',
+        Component: LazyFormikYupPage,
+        name: 'Register Formik Yup'
+    },
+    {
+        to: '/registerpage',
+        path: 'registerpage',
+        Component: LazyRegisterPage,
+        name: 'Register Page'
+    },
     {
         to: '/no-lazy',
         path: 'no-lazy',
