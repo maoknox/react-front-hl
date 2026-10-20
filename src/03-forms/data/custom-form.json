@@ -1,0 +1,14 @@
+[
+    {
+        "type": "input",
+        "name": "firstName",
+        "placeholder":"Mauricio",
+        "label": "Primer nombre"
+    },
+    {
+        "type": "input",
+        "name": "lastName",
+        "placeholder":"Vargas",
+        "label": "Apellidos"
+    }
+]
